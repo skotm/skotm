@@ -1,16 +1,61 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**skotm/skotm** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# skotm
 
-Here are some ideas to get you started:
+Weather · Earthquake · Disaster Information Visualization
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+</div>
+
+---
+
+気象・地震・防災情報の可視化ツールを開発しています。
+
+主に JavaScript を用いて、リアルタイムデータの取得・解析・地図上への可視化を行っています。
+
+## Projects
+
+### WIS Viewer
+
+気象情報可視化ツール
+
+気象庁の公開データを利用し、気温・降水量・風・台風・警報・雨雲レーダーなどを地図上で可視化。
+
+### EQS Viewer
+
+地震情報可視化ツール
+
+地震情報や観測データをリアルタイムで表示するWebアプリケーション。
+
+### EQS
+
+地震シミュレーター
+
+仮想地震の発生から揺れの伝播までを再現するシミュレーションツール。
+
+## Technologies
+
+- JavaScript
+- HTML / CSS
+- Python
+- MapLibre GL JS
+- Turf.js
+- GeoJSON
+
+## Statistics
+
+<p align="center">
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=skotm&show_icons=true&hide_border=true&theme=transparent" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=skotm&layout=compact&hide_border=true&theme=transparent" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=skotm&hide_border=true&theme=transparent" />
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=skotm&style=flat-square" />
+</p>
+
+---
+
+> 気象・地震・防災情報を、より分かりやすく可視化することを目標に開発しています。
