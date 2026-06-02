@@ -9,25 +9,21 @@
 ## Projects
 
 ### WIS Viewer
-
 気象情報可視化ツール
-
+https://github.com/skotm/wis-viewer
 気象庁の公開データを利用し、気温・降水量・風・台風・警報・雨雲レーダーなどを地図上で可視化。
 
 ### EQS Viewer
-
 地震情報可視化ツール
-
+https://github.com/skotm/eqs-viewer
 地震情報や観測データをリアルタイムで表示するWebアプリケーション。
 
 ### EQS
-
 地震シミュレーター
-
+https://github.com/skotm/eqs
 仮想地震の発生から揺れの伝播までを再現するシミュレーションツール。
 
 ## Technologies
-
 - JavaScript
 - HTML / CSS
 - Python
