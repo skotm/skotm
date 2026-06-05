@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skotm | Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        /* 💡 スクロールバーを完全に非表示にする設定 */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-zinc-200 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-100 transition-colors duration-300 antialiased selection:bg-blue-500/30 no-scrollbar">
+
+    <button
+        onclick="toggleTheme()"
+        class="fixed top-4 right-4 z-40 p-2.5 rounded-full bg-zinc-300/80 dark:bg-zinc-700/60 backdrop-blur-md shadow-sm border border-zinc-400/30 dark:border-zinc-600/80 transition-all hover:scale-105 active:scale-95"
+        aria-label="Toggle Theme"
+    >
+        <svg id="icon-moon" class="w-5 h-5 text-zinc-600 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <svg id="icon-sun" class="w-5 h-5 text-yellow-500 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+    </button>
+
+    <main class="max-w-4xl mx-auto px-4 md:px-8 py-6 md:py-10 flex flex-col gap-6 md:gap-8">
+        
+        <header class="flex flex-col gap-3 max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-500/20 w-fit">
+                Visualization Engineer
+            </div>
+            <h1 class="text-3xl md:text-4xl font-black tracking-tight text-zinc-800 dark:text-white leading-tight">
+                skotm
+            </h1>
+            <p class="text-lg md:text-xl font-bold text-zinc-700 dark:text-zinc-300">
+                気象・地震・防災情報を、より分かりやすく可視化する。
+            </p>
+            <p class="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">
+                主に JavaScript を用いて、リアルタイムデータの取得・解析・地図上への高度な可視化を行っています。社会的意義の大きいデータを、誰もが直感的に理解できるインターフェースへ。
+            </p>
+        </header>
+
+        <div class="grid grid-cols-2 md:grid-cols-[1fr_1fr_280px] gap-4 md:gap-5 md:grid-rows-[240px_200px_200px]">
+            
+            <section class="order-1 md:order-none col-span-2 md:col-span-2 group relative overflow-hidden rounded-3xl bg-zinc-300/30 dark:bg-zinc-700/40 backdrop-blur-2xl border border-zinc-400/30 dark:border-zinc-600/50 h-[calc(50vw-1.5rem)] md:h-full transition-all hover:shadow-xl hover:shadow-zinc-400/20 dark:hover:shadow-black/20">
+                <img src="./images/wis-bg.png" class="absolute inset-0 w-full h-full object-cover opacity-25 dark:opacity-30 pointer-events-none transition-transform duration-700 group-hover:scale-105 z-0" alt="" aria-hidden="true" />
+                <a href="https://skotm.github.io/wis-viewer/" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-10 block" aria-label="WIS Viewer デモを開く"></a>
+                <div class="relative z-20 p-4 md:p-5 flex flex-col justify-between h-full bg-gradient-to-t from-zinc-300/20 via-transparent to-transparent pointer-events-none">
+                    <div>
+                        <span class="text-[10px] md:text-xs font-mono text-zinc-600 dark:text-zinc-400 uppercase tracking-widest font-bold">Featured Project</span>
+                        <h2 class="text-xl md:text-2xl font-black mt-1 text-zinc-800 dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors">WIS Viewer</h2>
+                        <p class="text-zinc-800 dark:text-zinc-200 mt-1 md:mt-2 max-w-md text-[11px] md:text-xs font-medium leading-relaxed line-clamp-2">
+                            気象庁の公開データを利用し、気温・降水量・風・台風・警報・雨雲レーダーなどを地図上でリアルタイムに可視化するアプリケーション。
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-between gap-4 mt-auto pt-2 border-t border-zinc-400/40 dark:border-zinc-600/50">
+                        <div class="flex gap-1.5">
+                            <span class="px-2 py-0.5 text-[10px] rounded-md bg-zinc-400/40 dark:bg-zinc-600/80 backdrop-blur font-bold text-zinc-800 dark:text-zinc-200">MapLibre JS</span>
+                            <span class="px-2 py-0.5 text-[10px] rounded-md bg-zinc-400/40 dark:bg-zinc-600/80 backdrop-blur font-bold text-zinc-800 dark:text-zinc-200">GeoJSON</span>
+                        </div>
+                        <div class="flex items-center gap-2 md:gap-4">
+                            <span class="text-[10px] md:text-xs font-bold text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors">App ↗</span>
+                            <a href="https://github.com/skotm/wis-viewer" target="_blank" rel="noopener noreferrer" class="pointer-events-auto text-xs font-bold text-blue-700 dark:text-blue-300 hover:underline">
+                                GitHub →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="order-6 md:order-none col-span-2 md:col-span-1 group relative overflow-hidden rounded-3xl bg-zinc-300/30 dark:bg-zinc-700/40 backdrop-blur-2xl border border-zinc-400/30 dark:border-zinc-600/50 h-[300px] md:row-span-3 md:h-full transition-all hover:shadow-xl hover:shadow-zinc-400/20 dark:hover:shadow-black/20">
+                <div class="relative z-20 flex flex-col justify-between h-full w-full overflow-hidden">
+                    <div id="twitter-container" class="relative flex-grow overflow-y-auto no-scrollbar w-full py-1.5 h-full">
+                        <div class="animate-pulse flex flex-col gap-1.5 px-2 mt-4">
+                            <div class="h-2 bg-zinc-400/40 rounded w-1/3"></div>
+                            <div class="h-2 bg-zinc-400/30 rounded w-full"></div>
+                        </div>
+                    </div>
+                    <div class="mt-auto p-4 pt-2.5 border-t border-zinc-400/40 dark:border-zinc-600/50 flex justify-between items-center shrink-0 bg-zinc-300/10 dark:bg-zinc-800/20 backdrop-blur-sm z-10">
+                        <span class="text-[9px] md:text-[10px] font-bold text-zinc-500 dark:text-zinc-400">Latest Updates</span>
+                        <a href="https://twitter.com/skotm" target="_blank" rel="noopener noreferrer" class="text-[10px] md:text-xs font-bold text-blue-700 dark:text-blue-300 hover:underline">@skotm →</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="order-3 md:order-none col-span-1 md:col-span-1 group relative overflow-hidden rounded-3xl bg-zinc-300/30 dark:bg-zinc-700/40 backdrop-blur-2xl border border-zinc-400/30 dark:border-zinc-600/50 max-md:aspect-square md:h-full transition-all hover:shadow-xl hover:shadow-zinc-400/20 dark:hover:shadow-black/20">
+                <img src="./images/eqs-viewer-bg.png" class="absolute inset-0 w-full h-full object-cover opacity-25 dark:opacity-30 pointer-events-none transition-transform duration-700 group-hover:scale-105 z-0" alt="" aria-hidden="true" />
+                <a href="https://skotm.github.io/eqs-viewer/" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-10 block" aria-label="EQS Viewer デモを開く"></a>
+                <div class="relative z-20 p-4 flex flex-col justify-between h-full bg-gradient-to-t from-zinc-300/20 via-transparent to-transparent pointer-events-none">
+                    <div>
+                        <span class="text-[10px] font-mono text-zinc-600 dark:text-zinc-400 uppercase tracking-widest font-bold">Project</span>
+                        <h2 class="text-lg md:text-xl font-black mt-0.5 text-zinc-800 dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors leading-tight">EQS Viewer</h2>
+                        <p class="text-zinc-800 dark:text-zinc-200 mt-1 text-[11px] font-medium leading-snug line-clamp-2">
+                            地震情報や全国の観測データをリアルタイムで収集・マッピング。
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between mt-auto pt-2 border-t border-zinc-400/40 dark:border-zinc-600/50">
+                        <span class="px-1.5 py-0.5 text-[9px] md:text-[10px] rounded bg-zinc-400/40 dark:bg-zinc-600/80 font-bold text-zinc-800 dark:text-zinc-200">JS</span>
+                        <div class="flex items-center gap-1.5 md:gap-3">
+                            <span class="text-[9px] md:text-xs font-bold text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors">App ↗</span>
+                            <a href="https://github.com/skotm/eqs-viewer" target="_blank" rel="noopener noreferrer" class="pointer-events-auto text-[11px] md:text-xs font-bold text-blue-700 dark:text-blue-300 hover:underline">GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="order-2 md:order-none col-span-1 md:col-span-1 group relative overflow-hidden rounded-3xl bg-zinc-300/30 dark:bg-zinc-700/40 backdrop-blur-2xl border border-zinc-400/30 dark:border-zinc-600/50 max-md:aspect-square md:h-full transition-all hover:shadow-xl hover:shadow-zinc-400/20 dark:hover:shadow-black/20">
+                <img src="./images/eqs-bg.png" class="absolute inset-0 w-full h-full object-cover opacity-25 dark:opacity-30 pointer-events-none transition-transform duration-700 group-hover:scale-105 z-0" alt="" aria-hidden="true" />
+                <a href="https://skotm.github.io/eqs/" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-10 block" aria-label="EQS デモを開く"></a>
+                <div class="relative z-20 p-4 flex flex-col justify-between h-full bg-gradient-to-t from-zinc-300/20 via-transparent to-transparent pointer-events-none">
+                    <div>
+                        <span class="text-[10px] font-mono text-zinc-600 dark:text-zinc-400 uppercase tracking-widest font-bold">Simulation</span>
+                        <h2 class="text-lg md:text-xl font-black mt-0.5 text-zinc-800 dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors leading-tight">EQS</h2>
+                        <p class="text-zinc-800 dark:text-zinc-200 mt-1 text-[11px] font-medium leading-snug line-clamp-2">
+                            仮想地震の発生からP波・S波の伝播、震度計算までを再現。
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between mt-auto pt-2 border-t border-zinc-400/40 dark:border-zinc-600/50">
+                        <span class="px-1.5 py-0.5 text-[9px] md:text-[10px] rounded bg-zinc-400/40 dark:bg-zinc-600/80 font-bold text-zinc-800 dark:text-zinc-200">Py/JS</span>
+                        <div class="flex items-center gap-1.5 md:gap-3">
+                            <span class="text-[9px] md:text-xs font-bold text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors">App ↗</span>
+                            <a href="https://github.com/skotm/eqs" target="_blank" rel="noopener noreferrer" class="pointer-events-auto text-[11px] md:text-xs font-bold text-blue-700 dark:text-blue-300 hover:underline">GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="order-4 md:order-none col-span-1 md:col-span-1 group relative overflow-hidden rounded-3xl bg-zinc-300/30 dark:bg-zinc-700/40 backdrop-blur-2xl border border-zinc-400/30 dark:border-zinc-600/50 max-md:aspect-square md:h-full transition-all hover:shadow-xl hover:shadow-zinc-400/20 dark:hover:shadow-black/20">
+                <a href="./hitokoto.html" class="absolute inset-0 z-10 block" aria-label="ひとこと専用画面を開く"></a>
+                <div class="relative z-20 p-4 flex flex-col justify-between h-full pointer-events-none w-full overflow-hidden">
+                    <div class="shrink-0 mb-1">
+                        <span class="text-[10px] font-mono text-zinc-600 dark:text-zinc-400 uppercase tracking-widest font-bold">Blog</span>
+                        <h2 class="text-lg md:text-xl font-black mt-0.5 text-zinc-800 dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors">ひとこと</h2>
+                    </div>
+                    <div class="relative flex-grow overflow-hidden max-h-[70px] md:max-h-[85px] my-1">
+                        <div id="markdown-container" class="prose prose-sm prose-zinc dark:prose-invert max-w-none text-[10px] md:text-xs leading-relaxed">
+                            <div class="animate-pulse flex flex-col gap-1.5">
+                                <div class="h-2 bg-zinc-400/40 rounded w-1/3"></div>
+                                <div class="h-2 bg-zinc-400/30 rounded w-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-auto pt-2 border-t border-zinc-400/40 dark:border-zinc-600/50 flex justify-between items-center shrink-0">
+                        <span class="text-[9px] md:text-[10px] font-bold text-zinc-500 dark:text-zinc-400">View All Notes</span>
+                        <span class="text-[10px] md:text-xs font-bold text-blue-700 dark:text-blue-300 group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="order-5 md:order-none col-span-1 md:col-span-1 group relative overflow-hidden rounded-3xl bg-zinc-300/30 dark:bg-zinc-700/40 backdrop-blur-2xl border border-zinc-400/30 dark:border-zinc-600/50 max-md:aspect-square md:h-full transition-all hover:shadow-xl hover:shadow-zinc-400/20 dark:hover:shadow-black/20">
+                <a href="https://github.com/skotm" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-10 block" aria-label="GitHub プロフィールを開く"></a>
+                <div class="relative z-20 p-4 flex flex-col justify-between h-full pointer-events-none">
+                    <div>
+                        <span class="text-[10px] font-mono text-zinc-600 dark:text-zinc-400 uppercase tracking-widest font-bold">Activity</span>
+                        <h2 class="text-lg md:text-xl font-black mt-0.5 text-zinc-800 dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors leading-tight">GitHub</h2>
+                        <p class="text-zinc-800 dark:text-zinc-200 mt-1 text-[11px] font-medium leading-snug line-clamp-2">
+                            日々の開発活動、作成したリポジトリ、ソースコードを公開しています。
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between mt-auto pt-2 border-t border-zinc-400/40 dark:border-zinc-600/50">
+                        <span class="text-[9px] md:text-[10px] font-bold text-zinc-500 dark:text-zinc-400">Contributions</span>
+                        <span class="pointer-events-auto text-[11px] md:text-xs font-bold text-blue-700 dark:text-blue-300 hover:underline">View →</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        const TWEET_COUNT = 1;
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            html.classList.toggle('dark');
+            
+            const isDark = html.classList.contains('dark');
+            document.getElementById('icon-moon').style.display = isDark ? 'block' : 'none';
+            document.getElementById('icon-sun').style.display = isDark ? 'none' : 'block';
+
+            loadTweets();
+        }
+
+        async function loadMarkdown() {
+            const container = document.getElementById('markdown-container');
+            try {
+                const response = await fetch('./assets/hitokoto.md?t=' + new Date().getTime());
+                if (!response.ok) throw new Error('Markdown not found');
+                const text = await response.text();
+                container.innerHTML = marked.parse(text);
+            } catch (e) {
+                console.error(e);
+                container.innerHTML = `<p class="text-zinc-500 italic">No notes found.</p>`;
+            }
+        }
+
+        async function loadTweets() {
+            const container = document.getElementById('twitter-container');
+            container.innerHTML = ''; 
+            
+            let loadedAny = false;
+            const isDark = document.documentElement.classList.contains('dark');
+
+            for (let i = TWEET_COUNT; i >= 1; i--) {
+                try {
+                    const response = await fetch(`./tws/x${i}.html?t=` + new Date().getTime());
+                    if (response.ok) {
+                        let html = await response.text();
+                        
+                        const themeAttr = isDark ? 'data-theme="dark"' : 'data-theme="light"';
+                        html = html.replace('<blockquote class="twitter-tweet"', `<blockquote class="twitter-tweet" ${themeAttr} data-dnt="true" data-conversation="none" data-width="100%"`);
+
+                        const tweetWrapper = document.createElement('div');
+                        tweetWrapper.className = 'w-full mb-1 last:mb-0';
+                        tweetWrapper.innerHTML = html;
+                        container.appendChild(tweetWrapper);
+                        loadedAny = true;
+                    }
+                } catch (e) {
+                    console.error(`Failed to load tweet x${i}:`, e);
+                }
+            }
+
+            if (!loadedAny) {
+                container.innerHTML = `<p class="text-zinc-500 italic text-[11px] px-4 mt-4">ツイートが見つかりません。</p>`;
+            } else {
+                if (window.twttr && window.twttr.widgets) {
+                    window.twttr.widgets.load(container);
+                } else {
+                    const script = document.createElement('script');
+                    script.src = "https://platform.x.com/widgets.js";
+                    script.async = true;
+                    script.charset = "utf-8";
+                    document.body.appendChild(script);
+                }
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadMarkdown();
+            loadTweets();
+        });
+    </script>
+</body>
+</html>
