@@ -5,6 +5,7 @@
 気象・地震・防災情報の可視化ツールを開発しています。
 
 主に JavaScript を用いて、リアルタイムデータの取得・解析・地図上への可視化を行っています。
+ポートフォリオ→https://skotm.github.io/portfolio/
 
 ## Projects
 
