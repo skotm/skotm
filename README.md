@@ -26,14 +26,6 @@ https://github.com/skotm/eqs
 
 仮想地震の発生から揺れの伝播までを再現するシミュレーションツール。
 
-## Technologies
-- JavaScript
-- HTML / CSS
-- Python
-- MapLibre GL JS
-- Turf.js
-- GeoJSON
-
 ## Statistics
 
 <p align="center">
