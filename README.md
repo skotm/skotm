@@ -10,6 +10,12 @@
 
 ## Projects
 
+### MeteoQuake
+地震気象防災アプリ
+https://github.com/skotm/MeteoQuake
+
+（現在開発中）
+
 ### WIS Viewer
 気象情報可視化ツール
 https://github.com/skotm/wis-viewer
