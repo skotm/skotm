@@ -36,32 +36,22 @@
 
 <table>
 <tr>
-<td width="50%">
+<td width="50%" valign="top">
 
 **[MeteoQuake](https://github.com/skotm/MeteoQuake)**
 地震・津波・気象情報を可視化する防災アプリ
 `現在開発中`
 
+<img src="./assets/meteoquake.png" alt="MeteoQuake screenshot" width="100%"/>
+
 </td>
-<td width="50%">
+<td width="50%" valign="top">
 
 **[WIS Viewer](https://github.com/skotm/wis-viewer)**
 気象庁の公開データを用いた気象情報可視化ツール
 気温・降水量・風・台風・警報・雨雲レーダー等を地図上に表示
 
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-**[EQS Viewer](https://github.com/skotm/eqs-viewer)**
-地震情報・観測データをリアルタイム表示するWebアプリ
-
-</td>
-<td width="50%">
-
-**[EQS](https://github.com/skotm/eqs)**
-仮想地震の発生から揺れの伝播までを再現するシミュレーター
+<img src="./assets/wis-viewer.png" alt="WIS Viewer screenshot" width="100%"/>
 
 </td>
 </tr>
@@ -92,7 +82,6 @@
 </picture>
 
 </div>
-
 
 ---
 
