@@ -73,9 +73,6 @@
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=skotm&show_icons=true&hide_border=true&theme=tokyonight" alt="skotm's GitHub stats" height="165"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=skotm&layout=compact&hide_border=true&theme=tokyonight" alt="Top Languages" height="165"/>
-
 <img src="https://streak-stats.demolab.com?user=skotm&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=skotm&theme=tokyo-night&hide_border=true&area=true" alt="Activity Graph" width="100%"/>
@@ -95,6 +92,7 @@
 </picture>
 
 </div>
+
 
 ---
 
