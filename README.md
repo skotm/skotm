@@ -11,6 +11,7 @@
 - 高校3年生
 - AI等を駆使して色々なツールをつくっています
 - 地震や気象・防災情報に興味あり
+- 埼玉県
 - X: [@skotm_0423](https://x.com/skotm_0423)
 - ポートフォリオ: [skotm.github.io/portfolio](https://skotm.github.io/portfolio/)
 
@@ -87,7 +88,11 @@
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/skotm/skotm/output/github-contribution-grid-snake-dark.svg" alt="snake animation" width="100%"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/skotm/skotm/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/skotm/skotm/output/github-contribution-grid-snake.svg" />
+  <img alt="snake animation" src="https://raw.githubusercontent.com/skotm/skotm/output/github-contribution-grid-snake.svg" width="100%"/>
+</picture>
 
 </div>
 
