@@ -11,7 +11,6 @@
 - 高校3年生　
 - AI等を駆使して色々なツールをつくっています
 - 地震や気象・防災情報に興味あり
-- 埼玉県
 - X: [@skotm_0423](https://x.com/skotm_0423)
 - ポートフォリオ: [skotm.github.io/portfolio](https://skotm.github.io/portfolio/)
 
