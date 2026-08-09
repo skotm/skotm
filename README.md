@@ -91,8 +91,6 @@
 
 </div>
 
-> snakeアニメーションは別途 [GitHub Actions ワークフロー](https://github.com/Platane/snk) の設定が必要です(下記メモ参照)
-
 ---
 
 <div align="center">
